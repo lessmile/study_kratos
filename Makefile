@@ -44,6 +44,10 @@ api:
 	       --openapi_out=fq_schema_naming=true,default_response=false:. \
 	       $(API_PROTO_FILES)
 
+.PHONY: wire
+wire:
+	cd ./cmd/helloworld && wire
+
 .PHONY: build
 # build
 build:
